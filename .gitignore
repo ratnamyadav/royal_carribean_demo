@@ -1,0 +1,5 @@
+nodemon.json
+.idea
+node_modules
+uploads
+package-lock.json
