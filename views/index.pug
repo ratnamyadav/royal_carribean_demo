@@ -1,0 +1,78 @@
+extends layout
+
+block content
+  // start container
+  .container
+    // card stats start
+    #card-stats
+      .row
+        .col.s12.m6.l3
+          .card.gradient-45deg-light-blue-cyan.gradient-shadow.min-height-100.white-text
+            .padding-4
+              .col.s7.m7
+                i.material-icons.background-round.mt-5 access_alarm
+                p
+              .col.s5.m5.right-align
+                h5.mb-0 690
+                p.no-margin
+                p Notifications this week
+        .col.s12.m6.l3
+          .card.gradient-45deg-red-pink.gradient-shadow.min-height-100.white-text
+            .padding-4
+              .col.s7.m7
+                i.material-icons.background-round.mt-5 perm_identity
+                p
+              .col.s5.m5.right-align
+                h5.mb-0 1885
+                p.no-margin
+                p Senders this week
+        .col.s12.m6.l3
+          .card.gradient-45deg-amber-amber.gradient-shadow.min-height-100.white-text
+            .padding-4
+              .col.s7.m7
+                i.material-icons.background-round.mt-5 perm_identity
+                p
+              .col.s5.m5.right-align
+                h5.mb-0 1,700
+                p.no-margin
+                p Recipients this week
+        .col.s12.m6.l3
+          .card.gradient-45deg-green-teal.gradient-shadow.min-height-100.white-text
+            .padding-4
+              .col.s7.m7
+                i.material-icons.background-round.mt-5 accessibility
+                p ESPA Connection
+              .col.s5.m5.right-align
+                h5.mb-0
+                p.no-margin
+                p Status: Connected
+    // card stats end
+    // yearly & weekly revenue chart start
+    #sales-chart
+      .row
+        .col.s12.m8.l8
+          #revenue-chart.card
+            .card-content
+              h4.header.mt-0
+                | Notification Analytics
+                span.purple-text.small.text-darken-1.ml-1
+                  i.material-icons keyboard_arrow_up
+                  |  15.58 %
+                a.waves-effect.waves-light.btn.gradient-45deg-purple-deep-orange.gradient-shadow.right Filter
+              .row
+                .col.s12
+                  .yearly-revenue-chart
+                    canvas#thisYearRevenue.firstShadow(height='350')
+                    canvas#lastYearRevenue(height='350')
+        .col.s12.m4.l4
+          .card
+            .card-content
+              ul
+                li.bold.waves-effect.wave-block
+                  a(href='/notifications') All Notifications
+                br
+                li.bold.waves-effect.wave-block
+                  a(href='/notifications/new') Create Notification
+    // yearly & weekly revenue chart end
+  // end container
+

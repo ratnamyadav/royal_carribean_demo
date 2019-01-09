@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  // start container
+  .container
+    #create-notification-form
+      h3 Create Notification
+      center
+        .row
+          .offset-s3.col.s6
+            label Select Extension(s)
+            select(multiple='')
+              option(value='' disabled='' selected='') Select Recipients
+              option(value='1') Option 1
+              option(value='2') Option 2
+              option(value='3') Option 3
+        .row
+          .input-field.offset-s3.col.s6
+            textarea#textarea1.materialize-textarea
+            label(for='textarea1') Message
+  // end container
+  

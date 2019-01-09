@@ -7,6 +7,7 @@ var session = require('express-session');
 var passport = require('passport');
 const expressValidator = require('express-validator');
 var mongoose = require('mongoose');
+
 mongoose.connect("mongodb+srv://mongodb:" + process.env.MONGO_PASSWORD + "@cluster0-2jvnp.mongodb.net/node-html?retryWrites=true")
     .then(() => {
         console.log('Connected with Database.')
@@ -16,13 +17,14 @@ mongoose.connect("mongodb+srv://mongodb:" + process.env.MONGO_PASSWORD + "@clust
     });
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var notificationsRouter = require('./routes/notifications');
+// var usersRouter = require('./routes/users');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -42,7 +44,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Validator
-app.use(expressValidator())
+app.use(expressValidator());
 
 // Flash messages
 app.use(require('connect-flash')());
@@ -52,7 +54,8 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/notifications', notificationsRouter);
+//app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

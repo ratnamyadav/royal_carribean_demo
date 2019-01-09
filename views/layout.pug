@@ -1,0 +1,124 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title [Ship Name] - Notification Engine
+    base(href='/')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    // Favicons
+    link(rel="icon", type="image/x-icon", href="favicon.ico")
+    link(rel="apple-touch-icon-precomposed", href="./favicon.ico")
+    // For iPhone
+    meta(name="msapplication-TileColor", content="#00bcd4")
+    meta(name="msapplication-TileImage", content="images/favicon/mstile-144x144.png")
+    // CORE CSS
+    link(href="/stylesheets/themes/semi-dark-menu/materialize.css", type="text/css", rel="stylesheet")
+    link(href="/stylesheets/themes/semi-dark-menu/style.css", type="text/css", rel="stylesheet")
+    // Custom CSS
+    link(href="/stylesheets/custom/custom.css", type="text/css", rel="stylesheet")
+    // INCLUDED PLUGIN CSS ON THIS PAGE
+    link(href="/vendors/perfect-scrollbar/perfect-scrollbar.css", type="text/css", rel="stylesheet")
+    link(href="/vendors/jvectormap/jquery-jvectormap.css", type="text/css", rel="stylesheet")
+    link(href="/vendors/flag-icon/css/flag-icon.min.css", type="text/css", rel="stylesheet")
+  body.layout-semi-dark
+    #loader-wrapper
+      #loader
+      .loader-section.section-left
+      .loader-section.section-right
+
+    header#header.page-topbar
+      .navbar-fixed
+        nav.navbar-color
+          .nav-wrapper
+            .header-search-wrapper.hide-on-med-and-down.sideNav-lock
+              i.material-icons search
+              input.header-search-input.z-depth-2(type="text", name="Search", placeholder="Find Extensions")
+            ul.right.hide-on-med-and-down
+
+    #main
+      .wrapper
+        // START LEFT SIDEBAR NAV
+        aside#left-sidebar-nav.nav-expanded.nav-lock.nav-collapsible
+          .brand-sidebar
+            h1.logo-wrapper
+              center
+                a.brand-logo.darken-1(href='index.html')
+                  img(style='height:100%;' src='images/logo/rcl-logo.png' alt='materialize logo')
+                  // <span class="logo-text hide-on-med-and-down">Materialize</span>
+              a.navbar-toggler(href='#')
+                i.material-icons radio_button_checked
+          ul#slide-out.side-nav.fixed.leftside-navigation
+            li.no-padding
+              ul.collapsible(data-collapsible='accordion')
+                li.bold
+                  a.waves-effect.waves-cyan(href='/')
+                    i.material-icons dashboard_outline
+                    span.nav-text Dashboard
+            li.bold
+              a.collapsible-header.waves-effect.waves-cyan(href="/notifications")
+                i.material-icons access_alarm_outline
+                span.nav-text Notifications
+              .collapsible-body
+                ul
+                  li.active
+                    a(href='index.html')
+                      i.material-icons access_alarms_outline
+                      span All
+                  li
+                    a(href='dashboard-analytics.html')
+                      i.material-icons add_alarm_outline
+                      span Create
+            li.li-hover
+              p.ultra-small.margin.more-text(style='height:42em;')
+                // space
+            li.li-hover
+              p.ultra-small.margin.more-text MORE
+            li
+              a(href='angular-ui.html')
+                i.material-icons verified_user
+                span.nav-text Settings
+            li
+              a(href='../documentation' target='_blank')
+                i.material-icons import_contacts
+                span.nav-text Help
+            li
+              a(href='https://pixinvent.ticksy.com' target='_blank')
+                i.material-icons reply_all_outline
+                span.nav-text Logout
+          a.sidebar-collapse.btn-floating.btn-medium.waves-effect.waves-light.hide-on-large-only.gradient-45deg-light-blue-cyan.gradient-shadow(href='#' data-activates='slide-out')
+            i.material-icons menu
+        // END LEFT SIDEBAR NAV
+        // ////////////////////////////////////////////////////////////////////////////
+        // START CONTENT
+        section#content
+          block content
+
+    footer.page-footer
+      .footer-copyright
+        .container
+          span Copyright ©
+            script(type='text/javascript').
+              document.write(new Date().getFullYear());
+            a.grey-text.text-darken-2(href="https://rccl.com", target="_blank") &nbsp;Royal Caribbean International
+            = "All rights reserved."
+          span.right.hide-on-small-only Design and Developed by
+            a.grey-text.text-darken-2(href="https://rccl.com") RCL Device Team
+
+
+
+
+    // jQuery Library
+    script(type="text/javascript", src="/vendors/jquery-3.2.1.min.js")
+    // materialize js
+    script(type="text/javascript", src="/javascripts/materialize.js")
+    // prism
+    script(type="text/javascript", src="/vendors/prism/prism.js")
+    // scrollbar
+    script(type="text/javascript", src="/vendors/perfect-scrollbar/perfect-scrollbar.min.js")
+    // chartjs
+    script(type="text/javascript", src="/vendors/chartjs/chart.min.js")
+    // plugins.js - Some Specific JS codes for Plugin Settings
+    script(type="text/javascript", src="/javascripts/plugins.js")
+    // custom-script.js - Add your own theme custom JS
+    script(type="text/javascript", src="/javascripts/custom-script.js")
+    script(type="text/javascript", src="/javascripts/scripts/dashboard-ecommerce.js")
