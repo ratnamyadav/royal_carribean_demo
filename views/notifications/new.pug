@@ -6,17 +6,28 @@ block content
     #create-notification-form
       h3 Create Notification
       center
-        .row
-          .offset-s3.col.s6
-            label Select Extension(s)
-            select(multiple='')
-              option(value='' disabled='' selected='') Select Recipients
-              option(value='1') Option 1
-              option(value='2') Option 2
-              option(value='3') Option 3
-        .row
-          .input-field.offset-s3.col.s6
-            textarea#textarea1.materialize-textarea
-            label(for='textarea1') Message
+        form(method="post", action="/notifications")
+          .row
+            .offset-s3.col.s6
+              if errors
+                .card.red.lighten-5
+                  .card-content.red-text
+                    each error, i in errors
+                      p #{error.msg}
+          .row
+            .offset-s3.col.s6
+              label Select Extension(s)
+              select(multiple='', name='recipientsIds')
+                option(value='' disabled='' selected='') Select Recipients
+                each user in users
+                  option(value=user._id)= user.name
+                  option(value=user._id)= user.name
+          .row
+            .input-field.offset-s3.col.s6
+              textarea#textarea1.materialize-textarea(name='message')
+              label(for='textarea1') Message
+          .row
+            .offser-s3.col.s6(style='margin-left: 25%;')
+              input.btn.btn-primary(type="submit", name="submit", value="Send Notifications")
   // end container
   

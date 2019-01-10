@@ -4,22 +4,17 @@ block content
   section#content
     // start container
     .container
-      #create-notification-form
-        h3 Notifications
-        center
-          .row
+      h3 Notifications
+      .link-container
+        a.btn.green(href="/notifications/new") Add Notification
+      center
+        .row
+          each notification in notifications
             .col.m6
               .card.blue.darken-1
                 .card-content.white-text
-                  span.card-title [11/11/2019 11:11:111] - [5] Recipients
-                  p Notification messdage
-                .card-action
-                  a.white-text(href='#') Sender Extension: [33333]
-            .col.m6
-              .card.blue.darken-1
-                .card-content.white-text
-                  span.card-title [11/11/2019 11:11:111] - [5] Recipients
-                  p Notification messdage
-                .card-action
+                  span.card-title= "[" + notification.createdAt + "] - [" + notification.recipientsIds.length + "] Recipients"
+                  p= notification.message
+                //.card-action
                   a.white-text(href='#') Sender Extension: [33333]
 
