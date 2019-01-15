@@ -22,5 +22,4 @@ block content
                         td= user.password
                         td= user.ipAddress
                         td
-                            a.btn.green(href="/users/edit") Edit
                             a.btn.red(href="/users/destroy/" + user._id, onclick="return confirm('Are you sure?')") Delete
