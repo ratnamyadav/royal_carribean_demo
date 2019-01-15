@@ -66,25 +66,42 @@ There are two main aspects in the app Users and Notifications defined below
 
 Here we add all the users having Spectralink mobile. We have a link in sidebar Users to view all users.
 
-![Users](/readme_images/users.jpg)
+![Users View](/readme_images/users.jpg)
 
-In above image Name specifies name of the User. Username, 
-Password and IP Address we get from Spectralink mobile.
+In above image Name specifies name of the User. Username, Password and IP Address we get from Spectralink mobile.
 We can add more Users by clicking on Add Users button and adding all the information in form and submitting.
 
-![Users](/readme_images/users-add.jpg)
+![Users Create](/readme_images/users-add.jpg)
+Here we have a form to create a notification. 
+Username, Password and IP Address we get from Spectralink mobile.
 
 ### Notifications
 
-![Users](/readme_images/notifications.jpg)
+![Notifications View](/readme_images/notifications.jpg)
 Here we list all the notifications sent yet with time notification was sent, 
 no. of recipient and Message sent. 
 We can send more notifications by clicking on add notifications.
 We need to have Users in our system to be able to send notifications.
 
-![Users](/readme_images/notifications-create.jpg)
+![Notifications Create](/readme_images/notifications-create.jpg)
 Here we have a form to create a notification. 
 We have a multiselect field where we can select which Users we need to send the notifications to.
 We can add the message in textarea field and click on send notifications and it will send notifications accordingly.
 
 ## Setup WEB API on Spectralink mobile
+
+1. Start your Spectralink device.
+
+2. When you open the device you will see screen as shown below:
+![Device home](/readme_images/device-home.jpg)
+
+3. Click on Spectralink app folder and you will see app the apps
+![Device home](/readme_images/device-spectralink-folder-open.jpg)
+
+4. Click on `Web API` app and this will open the WEB API settings as shown below.
+![Device WEB API](/readme_images/device-web-api-1.jpg)
+
+5. To configure this device Username and Password for push notifications click on Push Settings and you will get a screen as shown below
+![Device WEB API](/readme_images/device-web-api-2.jpg)
+
+6. To get the IP address you swipe down from top of the screen and click on gear icon. This will take you to device settings and you can search IP Address and it will show you the IP address.
