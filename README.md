@@ -41,7 +41,6 @@ If the screen prompts you to enter a password, please enter your Mac's user pass
 2. After updating Homebrew ```brew install mongodb```
 3. After downloading Mongo, create the “db” directory. This is where the Mongo data files will live. You can create the directory in the default location by running ```mkdir -p /data/db```
 4. Make sure that the /data/db directory has the right permissions by running
-<br/>
 ```
 > sudo chown -R `id -un` /data/db
 > # Enter your password
@@ -51,16 +50,13 @@ If the screen prompts you to enter a password, please enter your Mac's user pass
 ## Setup Project
 
 1. Clone repository
-<br/>
-`git clone git@github.com:ratnamyadav/royal_carribean_demo.git`.
+```git clone git@github.com:ratnamyadav/royal_carribean_demo.git```
 
 2. Go to the project root in Terminal and install npm packages using command: 
-<br/>
-`npm install`
+```npm install```
 
 3. After packages installed successfully then you can start the application using command: 
-<br/>
-`npm run start`
+```npm run start```
 
 4. Open application in browser http://localhost:3000
 
@@ -74,7 +70,6 @@ Here we add all the users having Spectralink mobile. We have a link in sidebar U
 
 In above image Name specifies name of the User. Username, 
 Password and IP Address we get from Spectralink mobile.
-<br/>
 We can add more Users by clicking on Add Users button and adding all the information in form and submitting.
 
 ![Users](/readme_images/users-add.png)
