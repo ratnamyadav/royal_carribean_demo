@@ -66,23 +66,23 @@ There are two main aspects in the app Users and Notifications defined below
 
 Here we add all the users having Spectralink mobile. We have a link in sidebar Users to view all users.
 
-![Users](/readme_images/users.png)
+![Users](/readme_images/users.jpg)
 
 In above image Name specifies name of the User. Username, 
 Password and IP Address we get from Spectralink mobile.
 We can add more Users by clicking on Add Users button and adding all the information in form and submitting.
 
-![Users](/readme_images/users-add.png)
+![Users](/readme_images/users-add.jpg)
 
 ### Notifications
 
-![Users](/readme_images/notifications.png)
+![Users](/readme_images/notifications.jpg)
 Here we list all the notifications sent yet with time notification was sent, 
 no. of recipient and Message sent. 
 We can send more notifications by clicking on add notifications.
 We need to have Users in our system to be able to send notifications.
 
-![Users](/readme_images/notifications-create.png)
+![Users](/readme_images/notifications-create.jpg)
 Here we have a form to create a notification. 
 We have a multiselect field where we can select which Users we need to send the notifications to.
 We can add the message in textarea field and click on send notifications and it will send notifications accordingly.
