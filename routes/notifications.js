@@ -32,7 +32,6 @@ router.get('/new', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-    const url = 'http://192.168.0.100/push';
     req.check('recipientsIds', 'Recipients is required').not().isEmpty();
     req.check('message', 'Message is required').not().isEmpty();
     const errors = req.validationErrors();
@@ -52,6 +51,7 @@ router.post('/', function(req, res, next) {
             .then(docs => {
                 const message = "<SpectralinkIPPhone><Data priority='critical'><h2>" + req.body.message + "</h2></Data></SpectralinkIPPhone>"
                 for (var i = 0; i < docs.length; i++) {
+                    const url = 'http://' + docs[i].ipAddress + '/push';
                     var options = {
                         method: 'POST',
                         headers: {'Cache-Control': 'No-cache', 'Content-type': 'text/html'},
