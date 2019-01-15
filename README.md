@@ -50,4 +50,46 @@ If the screen prompts you to enter a password, please enter your Mac's user pass
 
 ## Setup Project
 
+1. Clone repository
+<br/>
+`git clone git@github.com:ratnamyadav/royal_carribean_demo.git`.
+
+2. Go to the project root in Terminal and install npm packages using command: 
+<br/>
+`npm install`
+
+3. After packages installed successfully then you can start the application using command: 
+<br/>
+`npm run start`
+
+4. Open application in browser http://localhost:3000
+
+There are two main aspects in the app Users and Notifications defined below
+
+### Users
+
+Here we add all the users having Spectralink mobile. We have a link in sidebar Users to view all users.
+
+![Users](/readme_images/users.png)
+
+In above image Name specifies name of the User. Username, 
+Password and IP Address we get from Spectralink mobile.
+<br/>
+We can add more Users by clicking on Add Users button and adding all the information in form and submitting.
+
+![Users](/readme_images/users-add.png)
+
+### Notifications
+
+![Users](/readme_images/notifications.png)
+Here we list all the notifications sent yet with time notification was sent, 
+no. of recipient and Message sent. 
+We can send more notifications by clicking on add notifications.
+We need to have Users in our system to be able to send notifications.
+
+![Users](/readme_images/notifications-create.png)
+Here we have a form to create a notification. 
+We have a multiselect field where we can select which Users we need to send the notifications to.
+We can add the message in textarea field and click on send notifications and it will send notifications accordingly.
+
 ## Setup WEB API on Spectralink mobile
